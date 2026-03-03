@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { useThemeContext } from '../context/useThemeContext.js';
+import { useThemeContext } from '../context/ThemeContext/useThemeContext.js';
 
 export default function Header() {
 	const { isDark, setIsDark } = useThemeContext();
@@ -24,12 +24,12 @@ export default function Header() {
 						className={`dark-mode-btn ${isDark && 'dark-mode-btn--active'}`}
 						onClick={handleChangeTheme}>
 						<img
-							src="./img/icons/sun.svg"
+							src="/img/icons/sun.svg"
 							alt="Light mode"
 							className="dark-mode-btn__icon"
 						/>
 						<img
-							src="./img/icons/moon.svg"
+							src="/img/icons/moon.svg"
 							alt="Dark mode"
 							className="dark-mode-btn__icon"
 						/>

@@ -13,7 +13,7 @@ export default function Contacts() {
 					<li className="content-list__item">
 						<h2 className="title-2">Telegram / WhatsApp</h2>
 						<p>
-							<a href="tel:+79051234567">+7 (905) 123-45-67</a>
+							<a href="tel:+3121234567">+312 123-45-67</a>
 						</p>
 					</li>
 					<li className="content-list__item">

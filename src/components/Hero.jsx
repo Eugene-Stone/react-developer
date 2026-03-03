@@ -1,12 +1,10 @@
-import React from 'react';
-
 export default function Hero() {
 	return (
 		<header className="header">
 			<div className="header__wrapper">
 				<h1 className="header__title">
 					<strong>
-						Hi, my name is <em>Yuri</em>
+						Hi, my name is <em>Yevhen</em>
 					</strong>
 					<br />a frontend developer
 				</h1>

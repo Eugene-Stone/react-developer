@@ -8,27 +8,27 @@ export default function Footer() {
 					<ul className="social">
 						<li className="social__item">
 							<a href="#!">
-								<img src="./img/icons/vk.svg" alt="Link" />
+								<img src="/img/icons/vk.svg" alt="Link" />
 							</a>
 						</li>
 						<li className="social__item">
 							<a href="#!">
-								<img src="./img/icons/instagram.svg" alt="Link" />
+								<img src="/img/icons/instagram.svg" alt="Link" />
 							</a>
 						</li>
 						<li className="social__item">
 							<a href="#!">
-								<img src="./img/icons/twitter.svg" alt="Link" />
+								<img src="/img/icons/twitter.svg" alt="Link" />
 							</a>
 						</li>
 						<li className="social__item">
 							<a href="#!">
-								<img src="./img/icons/gitHub.svg" alt="Link" />
+								<img src="/img/icons/gitHub.svg" alt="Link" />
 							</a>
 						</li>
 						<li className="social__item">
 							<a href="#!">
-								<img src="./img/icons/linkedIn.svg" alt="Link" />
+								<img src="/img/icons/linkedIn.svg" alt="Link" />
 							</a>
 						</li>
 					</ul>

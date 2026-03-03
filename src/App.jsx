@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ThemeProvider from './context/ThemeContext';
+import ThemeProvider from './context/ThemeContext/ThemeContext';
+import ProjectsProvider from './context/ProjectsContext/ProjectsContext';
 
 import Home from './pages/Home';
 import Contacts from './pages/Contacts';
@@ -14,21 +15,23 @@ import ScrollToTop from './components/ScrollToTOp';
 function App() {
 	return (
 		<ThemeProvider>
-			<BrowserRouter>
-				<ScrollToTop />
+			<ProjectsProvider>
+				<BrowserRouter>
+					<ScrollToTop />
 
-				<Header />
+					<Header />
 
-				<Routes>
-					<Route path="*" element={<PageNotFound />} />
-					<Route path="/" element={<Home />} />
-					<Route path="/contacts" element={<Contacts />} />
-					<Route path="/projects" element={<Projects />} />
-					<Route path="/projects/project/:id" element={<Project />} />
-				</Routes>
+					<Routes>
+						<Route path="*" element={<PageNotFound />} />
+						<Route path="/" element={<Home />} />
+						<Route path="/contacts" element={<Contacts />} />
+						<Route path="/projects" element={<Projects />} />
+						<Route path="/projects/project/:id" element={<Project />} />
+					</Routes>
 
-				<Footer />
-			</BrowserRouter>
+					<Footer />
+				</BrowserRouter>
+			</ProjectsProvider>
 		</ThemeProvider>
 	);
 }
