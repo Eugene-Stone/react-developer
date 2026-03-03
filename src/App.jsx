@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ThemeProvider from './context/ThemeContext';
 
 import Home from './pages/Home';
 import Contacts from './pages/Contacts';
@@ -12,7 +13,7 @@ import ScrollToTop from './components/ScrollToTOp';
 
 function App() {
 	return (
-		<>
+		<ThemeProvider>
 			<BrowserRouter>
 				<ScrollToTop />
 
@@ -28,7 +29,7 @@ function App() {
 
 				<Footer />
 			</BrowserRouter>
-		</>
+		</ThemeProvider>
 	);
 }
 

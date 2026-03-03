@@ -1,9 +1,16 @@
 import { NavLink } from 'react-router-dom';
+import { useThemeContext } from '../context/useThemeContext.js';
 
 export default function Header() {
+	const { isDark, setIsDark } = useThemeContext();
+
 	const linkClass = ({ isActive }) => {
 		return isActive ? 'nav-list__link nav-list__link--active' : 'nav-list__link';
 	};
+
+	function handleChangeTheme() {
+		setIsDark(!isDark);
+	}
 
 	return (
 		<nav className="nav">
@@ -13,7 +20,9 @@ export default function Header() {
 						<strong>Developer</strong> portfolio
 					</NavLink>
 
-					<button className="dark-mode-btn">
+					<button
+						className={`dark-mode-btn ${isDark && 'dark-mode-btn--active'}`}
+						onClick={handleChangeTheme}>
 						<img
 							src="./img/icons/sun.svg"
 							alt="Light mode"
