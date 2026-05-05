@@ -1,16 +1,22 @@
 import { createContext, useState, useEffect } from 'react';
 
-const ThemeContext = createContext(null);
+type ThemeContextType = {
+	isDark: boolean;
+	setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-export default function ThemeProvider({ children }) {
-	const [isDark, setIsDark] = useState(() => {
+const ThemeContext = createContext<ThemeContextType | null>(null);
+
+export default function ThemeProvider({ children }: { children: React.ReactNode }) {
+	const [isDark, setIsDark] = useState<boolean>(() => {
 		const savedTheme = localStorage.getItem('isDark');
 
 		return savedTheme ? JSON.parse(savedTheme) : true;
 	});
 
 	useEffect(() => {
-		localStorage.setItem('isDark', isDark);
+		// localStorage.setItem('isDark', isDark);
+		localStorage.setItem('isDark', JSON.stringify(isDark));
 
 		const themeClass = isDark ? 'dark' : 'light';
 

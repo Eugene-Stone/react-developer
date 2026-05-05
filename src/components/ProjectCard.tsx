@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
+import { ProjectType } from '../context/ProjectsContext/ProjectsContext';
 
-export default function Project({ id, title, img }) {
+export default function Project({ id, title, img }: ProjectType) {
 	return (
 		<li className="project">
 			<Link to={`/projects/project/${id}`}>

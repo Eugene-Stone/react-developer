@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import { useThemeContext } from '../context/ThemeContext/useThemeContext.js';
+import { useThemeContext } from '../context/ThemeContext/useThemeContext';
 
 export default function Header() {
 	const { isDark, setIsDark } = useThemeContext();
 
-	const linkClass = ({ isActive }) => {
+	const linkClass = ({ isActive }: { isActive: boolean }) => {
 		return isActive ? 'nav-list__link nav-list__link--active' : 'nav-list__link';
 	};
 
