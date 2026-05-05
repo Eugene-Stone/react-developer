@@ -10,7 +10,7 @@ import Contacts from './pages/Contacts';
 import Projects from './pages/Projects';
 import Project from './pages/Project';
 import PageNotFound from './pages/PageNotFound';
-import ScrollToTop from './components/ScrollToTOp';
+import ScrollToTop from './utils/ScrollToTOp';
 
 function App() {
 	return (
